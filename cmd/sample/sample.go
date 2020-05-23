@@ -21,12 +21,17 @@ type Item struct {
 }
 
 func main() {
+	rand.Seed(0)
 	// Init a database instance and choose the binding (builtin)
 	db := reindexer.NewReindex("builtin:///tmp/reindex/testdb")
 	db.SetLogger(&internal.Logger{})
 
 	// Create new namespace with name 'items', which will store structs of type 'Item'
 	err := db.OpenNamespace("items", reindexer.DefaultNamespaceOptions(), Item{})
+	if err != nil {
+		log.Fatalln(err)
+	}
+	err = db.SetDefaultQueryDebug("items", reindexer.TRACE)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -40,7 +45,7 @@ func main() {
 			Year:     2000 + rand.Int()%50,
 		})
 		if err != nil {
-			panic(err)
+			log.Fatalln(err)
 		}
 	}
 
