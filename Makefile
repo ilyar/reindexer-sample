@@ -37,4 +37,6 @@ bash: develop
 	docker run --rm -it -v ${PWD}:/app ${DEVELOP_IMAGE} bash
 build-sample:
 	go build cmd/sample/*.go
+run-sample:
+	go run cmd/sample/*.go
 

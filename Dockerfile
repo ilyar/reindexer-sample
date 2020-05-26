@@ -1,5 +1,6 @@
 FROM local/app:develop AS build
 COPY . .
+RUN make run-sample
 RUN make build-sample
 
 FROM alpine:3.11
