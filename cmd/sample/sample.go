@@ -6,6 +6,7 @@ import (
 	"math/rand"
 
 	"github.com/restream/reindexer"
+	"github.com/restream/reindexer/bindings"
 	// Link Reindexer as a static library
 	_ "github.com/restream/reindexer/bindings/builtin"
 
@@ -23,7 +24,12 @@ type Item struct {
 func main() {
 	rand.Seed(0)
 	// Init a database instance and choose the binding (builtin)
-	db := reindexer.NewReindex("builtin:///tmp/reindex/testdb")
+	connectOptions := *bindings.DefaultConnectOptions()
+	// connectOptions.Opts |= bindings.ConnectOptWarnVersion // TODO uncomment after update reindexer to 2.9
+	db := reindexer.NewReindex(
+		"builtin:///tmp/reindex/testdb",
+		connectOptions,
+	)
 	db.SetLogger(&internal.Logger{})
 
 	// Create new namespace with name 'items', which will store structs of type 'Item'

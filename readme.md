@@ -8,7 +8,6 @@ make run
 
 **Expected out**
 ```shell script
-Warning: Used Reindexer client version: v2.7.1 with library version: v2.8.0. It is strongly recommended to sync client & library versions
 2020/05/23 16:16:54 NamespaceImpl::NamespaceImpl (items)
 2020/05/23 16:16:54 Index::Index ('-tuple',-,string)  
 2020/05/23 16:16:54 Namespace::updateItems(items) delta=1
