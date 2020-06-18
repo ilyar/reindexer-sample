@@ -6,6 +6,26 @@ RUN apk --update --no-cache add \
 
 WORKDIR /src
 
+# gperftools
+RUN apk --update --no-cache add \
+    curl \
+    autoconf \
+    automake \
+    libtool \
+    linux-headers \
+    g++ \
+    make \
+    libunwind-dev
+RUN git clone \
+    --depth 1 \
+    https://github.com/gperftools/gperftools.git
+RUN cd gperftools && \
+    echo "noinst_PROGRAMS =" >> Makefile.am && \
+    ./autogen.sh && \
+    ./configure && \
+    make --jobs="$(nproc)" && \
+    make install
+
 # Build Reindexer
 ARG REINDEXER_BRANCH
 RUN git clone \
