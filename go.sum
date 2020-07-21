@@ -1,7 +1,11 @@
 github.com/golang/snappy v0.0.1 h1:Qgr9rKW7uDUkrbSmQeiDsGa8SjGyCOGtuasMWwvp2P4=
 github.com/golang/snappy v0.0.1/go.mod h1:/XxbfmMg8lxefKM7IXC3fBNl/7bRcc72aCRzEWrmP2Q=
+github.com/iancoleman/orderedmap v0.0.0-20190318233801-ac98e3ecb4b0 h1:i462o439ZjprVSFSZLZxcsoAe592sZB1rci2Z8j4wdk=
+github.com/iancoleman/orderedmap v0.0.0-20190318233801-ac98e3ecb4b0/go.mod h1:N0Wam8K1arqPXNWjMo21EXnBPOPp36vB07FNRdD2geA=
 github.com/restream/reindexer v2.9.1+incompatible h1:1JPLA5K8DZPZBiyE+53BGAWLru1jBQ+QyLBLbnq8iV0=
 github.com/restream/reindexer v2.9.1+incompatible/go.mod h1:1zcuRS92j/mekSQJgL8s8ZHVFrBL3IAuVPmOoIJUGvw=
+github.com/restream/reindexer v2.10.0+incompatible h1:O31Q/pAzCi0eshbAph20+JL6O71+aJxVrQr5UOpX/Sk=
+github.com/restream/reindexer v2.10.0+incompatible/go.mod h1:1zcuRS92j/mekSQJgL8s8ZHVFrBL3IAuVPmOoIJUGvw=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v2 v2.3.0 h1:clyUAQHOM3G0M3f5vQj7LuJrETvjVot3Z5el9nffUtU=
 gopkg.in/yaml.v2 v2.3.0/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
